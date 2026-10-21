@@ -15,7 +15,7 @@ meetspace/
 │   ├── routes/                # auth.js, rooms.js, files.js (Multer)
 │   ├── socket/index.js        # all Socket.IO events (rooms, signaling, chat, whiteboard)
 │   ├── uploads/               # uploaded files (git-ignored)
-│   └── .env.example
+│   └── .env
 └── client/
     ├── index.html, vite.config.js, tailwind.config.js, vercel.json
     └── src/
@@ -34,7 +34,7 @@ You need Node 18+ and MongoDB (local, or a free Atlas cluster).
 ```bash
 # Terminal 1 - backend
 cd server
-cp .env.example .env      # then edit JWT_SECRET and MONGO_URI
+cp .env  
 npm install
 npm run dev               # http://localhost:5000
 
@@ -42,7 +42,7 @@ npm run dev               # http://localhost:5000
 cd client
 cp .env.example .env
 npm install
-npm run dev               # http://localhost:5173
+npm run dev               # http://localhost:5174
 ```
 
 To test video calling: sign up two different users, one in a normal window and one in an incognito window (or another browser). Create a room in one, paste the Room ID in the other.
